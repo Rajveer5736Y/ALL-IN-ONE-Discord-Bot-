@@ -66,7 +66,7 @@ if (clientID && clientSecret) plugins.push(
 )
 
 // Lavalink client
-client.player = new Manager({
+/*client.player = new Manager({
     plugins,
     nodes: [
         {
@@ -88,7 +88,7 @@ const events = fs.readdirSync(`./src/events/music`).filter(files => files.endsWi
 for (const file of events) {
     const event = require(`./events/music/${file}`);
     client.player.on(file.split(".")[0], event.bind(null, client)).setMaxListeners(0);
-};
+};*/
 
 // Connect to database
 ;(async () => await require("./database/connect")())();
